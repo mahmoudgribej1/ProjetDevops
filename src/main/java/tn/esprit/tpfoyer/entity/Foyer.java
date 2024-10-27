@@ -6,6 +6,8 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.util.Set;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @Entity
 @Getter
@@ -15,6 +17,8 @@ import java.util.Set;
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Foyer {
+
+    private static final Logger logger = LogManager.getLogger(Foyer.class);
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,7 +36,11 @@ public class Foyer {
             @JsonIgnore
             @ToString.Exclude
     Set<Bloc> blocs;
+   public void ajouterBloc(Bloc bloc) {
+        logger.info("Ajout d'un bloc au foyer : {}", bloc.getNomBloc());
+        blocs.add(bloc);
+        logger.info("Bloc ajouté avec succès : {}", bloc.getNomBloc());
+    }
 
 }
-
 
