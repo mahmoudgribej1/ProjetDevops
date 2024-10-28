@@ -21,7 +21,7 @@ pipeline {
                 script {
                     echo 'Analyzing with SonarQube...'
                     // Remplace 'SonarQube' par le nom de ton serveur SonarQube configuré dans Jenkins
-                    withSonarQubeEnv('SonarQube') {
+                    withSonarQubeEnv('sonar_eyajerbi5BI5') {  // Changement ici
                         // Assure-toi que sonar-scanner est correctement configuré
                         sh 'sonar-scanner -Dsonar.projectKey=sonar_eyajerbi5BI5 -Dsonar.projectName=sonar_eyajerbi5BI5 -Dsonar.sources=src/main -Dsonar.language=java'
                     }
