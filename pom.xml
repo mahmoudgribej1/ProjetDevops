@@ -14,7 +14,7 @@
     <name>tp-foyer</name>
     <description>tp-foyer</description>
     <properties>
-        <java.version>23</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
 
@@ -69,7 +69,6 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>2.1.214</version> <!-- Remplacez avec une version compatible si nécessaire -->
             <scope>test</scope>
         </dependency>
 
