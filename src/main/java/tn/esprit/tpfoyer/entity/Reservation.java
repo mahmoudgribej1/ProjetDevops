@@ -1,6 +1,8 @@
 package tn.esprit.tpfoyer.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -24,17 +26,7 @@ public class Reservation {
     Date anneeUniversitaire;
     boolean estValide;
 
-
-
-
-
-
-
-
-
-
-
-    @ManyToMany
+ @ManyToMany
     Set<Etudiant> etudiants;
 
 
