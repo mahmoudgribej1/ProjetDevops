@@ -16,6 +16,6 @@ scrape_configs:
       - targets: [ "192.168.50.4:9100" ]
 
   - job_name: "spring"
-    metrics_path: '/actuator/prometheus'
+    metrics_path: '/prometheus'
     static_configs:
       - targets: ["192.168.50.4:8082"]
