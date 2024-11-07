@@ -63,7 +63,13 @@ services:
         - grafana_data:/var/lib/grafana
       networks:
         - app-network
-
+  node-exporter:
+    image: prom/node-exporter
+    container_name: node-exporter
+    ports:
+      - "9100:9100"
+    networks:
+      - app-network
 volumes:
   db:
   grafana_data:
