@@ -25,7 +25,7 @@ services:
     image: mahmoudgribej/tp-foyer:5.0.0
     restart: on-failure
     ports:
-      - "8089:8089"
+      - "8082:8082"
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/tp-foyer_db?createDatabaseIfNotExist=true
       SPRING_DATASOURCE_USERNAME: root
