@@ -66,6 +66,7 @@ services:
 
 volumes:
   db:
+  grafana_data:
 
 networks:
   app-network:
