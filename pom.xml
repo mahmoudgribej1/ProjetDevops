@@ -23,7 +23,7 @@
         <repository>
             <id>deploymentRepo</id>
             <name>Nexus Repository</name>
-            <url>http://localhost:8081/repository/maven-releases/</url>
+            <url>http://192.168.50.4:8081/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
 
@@ -92,12 +92,6 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>${log4j.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
         </dependency>
 
         <dependency>
