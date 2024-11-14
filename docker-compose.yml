@@ -21,7 +21,7 @@ services:
     depends_on:
       mysqldb:
         condition: service_healthy  # Wait for MySQL to be healthy before starting
-    image: yasmineg030/tpfoyer:1.0  # Utilisez l’image stable sans SNAPSHOT
+    image: yasmineg030/tpfoyer-1.0  # Utilisez l’image stable sans SNAPSHOT
     restart: on-failure
     ports:
       - 8082:8082
