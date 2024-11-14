@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>tn.esprit.tpfoyer</groupId>
     <artifactId>tpfoyer</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <parent>
@@ -15,16 +15,18 @@
     </parent>
 
     <properties>
-        <java.version>17</java.version> <!-- Mise à jour pour Java 20 -->
+        <java.version>17</java.version>
         <log4j.version>2.17.1</log4j.version> <!-- Version de Log4j -->
     </properties>
 
     <distributionManagement>
-        <repository>
-            <id>deploymentRepo</id>
-            <url>http://192.168.50.4:8081/repository/maven-releases/</url>
-        </repository>
+            <repository>
+                <id>deploymentRepo</id>
+                <name>Nexus Repository</name>
+                <url>http://192.168.50.4:8081/repository/maven-releases/</url>
+            </repository>
     </distributionManagement>
+
 
     <dependencies>
         <dependency>
@@ -35,7 +37,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.33</version> <!-- Vous pouvez utiliser la version la plus récente -->
+            <version>8.0.33</version>
         </dependency>
 
         <dependency>
@@ -47,7 +49,7 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>3.24.2</version> <!-- Utilisez la dernière version stable -->
+            <version>3.24.2</version>
             <scope>test</scope>
         </dependency>
 
@@ -122,6 +124,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.0.0-M1</version>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
